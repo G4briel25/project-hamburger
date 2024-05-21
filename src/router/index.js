@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-// import Pedidos from '../views/Pedidos.vue';
-// import Home from '@/views/Home.vue';
+import Pedidos from '@/views/Pedidos.vue';
+import Home from '@/views/Home.vue';
+import PaginaNaoEcontrada from '@/views/PaginaNaoEcontrada.vue';
 
-const lazyLoad = (view) => import(`../views/${view}.vue`);
+// const lazyLoad = (view) => import(`../views/${view}.vue`);
 
 const router = createRouter({
   history: createWebHistory('#'),
@@ -10,16 +11,16 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: lazyLoad('Home')
+      component: Home
     },
     {
       path: '/pedidos',
       name: 'pedidos',
-      component: lazyLoad('Pedidos')
+      component: Pedidos
     },
     {
       path: '/:pathMatch(.*)',
-      component: lazyLoad('PaginaNaoEcontrada'),
+      component: PaginaNaoEcontrada,
     }
   ]
 })
