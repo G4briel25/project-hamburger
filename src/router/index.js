@@ -5,7 +5,7 @@ import Home from '@/views/Home.vue';
 const lazyLoad = (view) => import(`../views/${view}.vue`);
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('#'),
   routes: [
     {
       path: '/',
