@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://G4briel25.github.io/project-hamburger/',
+  base: '/project-hamburger/',
   plugins: [
     vue(),
   ],
