@@ -15,7 +15,7 @@ const dadosAPI = reactive({
 });
 
 const getIngredientes = async () => {
-  const req = await fetch("http://localhost:3000/ingredientes");
+  const req = await fetch("https://api-burger-iota.vercel.app/ingredientes");
   const data = await req.json();
   // console.log(data);
 
@@ -29,7 +29,7 @@ const createBurger = async (e) => {
   e.preventDefault();
 
   // Obter todos os burgers existentes
-  const reqBurgers = await fetch("http://localhost:3000/burgers");
+  const reqBurgers = await fetch("https://api-burger-iota.vercel.app/burgers");
   const burgers = await reqBurgers.json();
 
   // Determinar o próximo ID numérico
@@ -46,7 +46,7 @@ const createBurger = async (e) => {
 
   const dataJson = JSON.stringify(data);
 
-  const req = await fetch("http://localhost:3000/burgers", {
+  const req = await fetch("https://api-burger-iota.vercel.app/burgers", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: dataJson
