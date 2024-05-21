@@ -2,7 +2,7 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-  logo: String,
+  // logo: String,
   alt: String
 });
 
@@ -12,7 +12,7 @@ const props = defineProps({
   <div>
     <nav id="nav">
       <RouterLink to="/" id="logo-url">
-        <img id="logo" :src="props.logo" :alt="props.alt">
+        <img id="logo" src="/img/logo.png" :alt="props.alt">
       </RouterLink>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/pedidos">Pedidos</RouterLink>
