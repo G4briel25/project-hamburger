@@ -1,4 +1,5 @@
 <script setup>
+import { RouterView } from 'vue-router';
 import Footer from './components/Footer.vue'
 import NavBar from './components/NavBar.vue'
 
@@ -13,7 +14,6 @@ const props = {
 <template>
   <NavBar :logo="props.logo_src" :alt="props.app_name"/>
   <RouterView></RouterView>
-
   <Footer></Footer>
 </template>
 
