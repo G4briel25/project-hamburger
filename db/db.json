@@ -77,25 +77,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "id": 1,
-      "nome": "",
-      "pao": "",
-      "carne": "",
-      "opcionais": [],
-      "status": "Solicitado"
-    },
-    {
-      "id": 2,
-      "nome": "Gabriel",
-      "pao": "3 Queijos",
-      "carne": "Picanha",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado"
-    }
-  ]
+  "burgers": []
 }
