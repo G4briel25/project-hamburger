@@ -46,18 +46,18 @@ const createBurger = async (e) => {
 
   const dataJson = JSON.stringify(data);
 
-  const req = await fetch("https://api-burger-iota.vercel.app/burgers", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: dataJson
-  });
+  // const req = await fetch(`https://api-burger-iota.vercel.app/burgers`, {
+  //   method: "POST",
+  //   headers: {"Content-Type": "application/json"},
+  //   body: dataJson
+  // });
 
-  const res = await req.json();
+  // const res = await req.json();
 
-  console.log(res);
+  console.log(dataJson);
 
   // Exibir mensagem ao realizar o pedido
-  dadosAPI.msg = `Pedido N°${res.id} realizado com sucesso!`;
+  dadosAPI.msg = `Pedido N°${dataJson.id} realizado com sucesso!`;
 
   // Limpar formulário ao criar pedido
   setTimeout(() => dadosAPI.msg = '', 3000);
