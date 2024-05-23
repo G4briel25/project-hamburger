@@ -52,15 +52,15 @@ const createBurger = async (e) => {
     body: dataJson
   });
 
-  // const res = await req.json();
+  const res = await req.json();
 
-  console.log(dataJson);
+  console.log(res);
 
   // Exibir mensagem ao realizar o pedido
-  dadosAPI.msg = `Pedido N°${dataJson.id} realizado com sucesso!`;
+  dadosAPI.msg = `Pedido N°${res.id} realizado com sucesso!`;
 
   // Limpar formulário ao criar pedido
-  setTimeout(() => dadosAPI.msg = '', 3000);
+  setTimeout(() => dadosAPI.msg = '', 3600);
 
   dadosAPI.nome = '';
   dadosAPI.pao = '';
